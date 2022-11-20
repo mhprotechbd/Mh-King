@@ -293,7 +293,7 @@ def login():
     resik()
     mkdir_data_login()
     poster()
-    print('\n%s[%s•%s] %sDon't Use Private Accounts %s!'%(M,P,M,P,M))
+    print('\n%s[%s•%s] %sDont Use Private Accounts %s!'%(M,P,M,P,M))
     print('%s[%s•%s] %sWhen the A2F Account is On, Open the Link Below'%(M,P,M,P))
     print('%s[%s•%s] %shttps://business.facebook.com/business_locations'%(M,P,M,J))
     print('%s[%s•%s] %sThen Enter Authentication Code'%(M,P,M,P))
