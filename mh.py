@@ -293,11 +293,11 @@ def login():
     resik()
     mkdir_data_login()
     poster()
-    print('\n%s[%s•%s] %sJangan Gunakan Akun Pribadi %s!'%(M,P,M,P,M))
-    print('%s[%s•%s] %sApabila Akun A2F On, Buka Link Dibawah'%(M,P,M,P))
+    print('\n%s[%s•%s] %sDon't Use Private Accounts %s!'%(M,P,M,P,M))
+    print('%s[%s•%s] %sWhen the A2F Account is On, Open the Link Below'%(M,P,M,P))
     print('%s[%s•%s] %shttps://business.facebook.com/business_locations'%(M,P,M,J))
-    print('%s[%s•%s] %sLalu Masukkan Kode Autentikasi'%(M,P,M,P))
-    cookie = str(input('\n%s[%s•%s] %sMasukkan Cookies %s: %s'%(J,P,J,P,J,P)))
+    print('%s[%s•%s] %sThen Enter Authentication Code'%(M,P,M,P))
+    cookie = str(input('\n%s[%s•%s] %sEnter Cookies %s: %s'%(J,P,J,P,J,P)))
     try:
         token = clotox(cookie)
         coki = {'cookie':cookie}
@@ -306,7 +306,7 @@ def login():
         open('login/cookie.json','w').write(cookie)
         open('login/token.json','w').write(token)
         tampilan_menu()
-    except requests.exceptions.ConnectionError:print('\n   %s[%s•%s] %sTidak Ada Koneksi Internet %s!%s\n'%(M,P,M,P,M,P));exit()
+    except requests.exceptions.ConnectionError:print('\n   %s[%s•%s] %sNo Internet %s!%s\n'%(M,P,M,P,M,P));exit()
     except (KeyError,IOError,AttributeError):print('\n   %s[%s•%s] %sCookies Invalid %s!%s\n'%(M,P,M,P,M,P));exit()
 
 ###----------[ MENU ]---------- ###
@@ -323,7 +323,7 @@ def tampilan_menu():
         resik()
         poster2()
         print('')
-        tamp_new = (f'   {P2}Hi! Sepertinya Kamu Adalah Pengguna Baru. Terima Kasih Telah Memilih SC Ini Sebagai Pilihan Terpercayamu. Sebelum Menggunakan SC Ini, Kamu Harus Mengatur User Agent Dahulu! Jangan Lupa Berikan Penilaian Terbaik Di Github Ya! Thank You!\n\n                {H2}- Denventa -')
+        tamp_new = (f'   {P2}Hi! Looks like you are a new user. Thank you for choosing this SC as your trusted choice. Before Using This SC, You Must Set Up a User Agent First! Don't Forget to Give the Best Rating on Github Yes! Thank you!\n\n                {H2}- Denventa -')
         printer(Panel(tamp_new,title=f'{H2}[ {P2}Welcome User {H2}]',width=54,padding=(1,4),style='#00FF00'))
         print('')
         useragent('new')
@@ -337,9 +337,9 @@ def tampilan_menu():
         nama = jsx["name"]
         user(nama)
         print(''%())
-        tampilan_menu = f"""  {J2}[{A2}01{J2}] {P2}Friendlist {J2}[{A2}06{J2}] {P2}Komentar {J2}[{A2}11{J2}] {A2}Email
+        tampilan_menu = f"""  {J2}[{A2}01{J2}] {P2}Friendlist {J2}[{A2}06{J2}] {P2}Comment {J2}[{A2}11{J2}] {A2}Email
   {J2}[{A2}02{J2}] {P2}Followers  {J2}[{A2}07{J2}] {P2}Grup     {J2}[{A2}12{J2}] {A2}Username
-  {J2}[{A2}03{J2}] {P2}Nama       {J2}[{A2}08{J2}] {P2}Hashtag  {J2}[{A2}13{J2}] {A2}ID Random
+  {J2}[{A2}03{J2}] {P2}Name       {J2}[{A2}08{J2}] {P2}Hashtag  {J2}[{A2}13{J2}] {A2}ID Random
   {J2}[{A2}04{J2}] {P2}Likers     {J2}[{A2}09{J2}] {A2}Beranda  {J2}[{A2}14{J2}] {P2}Saran Teman
   {J2}[{A2}05{J2}] {P2}Pesan      {J2}[{A2}10{J2}] {A2}File     {J2}[{A2}15{J2}] {P2}FL Dari FL
        {J2}[{A2}16{J2}] {A2}Cek Hasil       {J2}[{A2}19{J2}] {P2}User Agent
