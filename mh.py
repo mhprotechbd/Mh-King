@@ -323,7 +323,7 @@ def tampilan_menu():
         resik()
         poster2()
         print('')
-        tamp_new = (f'   {P2}Hi! Looks like you are a new user. Thank you for choosing this SC as your trusted choice. Before Using This SC, You Must Set Up a User Agent First! Don't Forget to Give the Best Rating on Github Yes! Thank you!\n\n                {H2}- Denventa -')
+        tamp_new = (f'   {P2}Hi! Looks like you are a new user. Thank you for choosing this SC as your trusted choice. Before Using This SC, You Must Set Up a User Agent First! Dont Forget to Give the Best Rating on Github Yes! Thank you!\n\n                {H2}- Denventa -')
         printer(Panel(tamp_new,title=f'{H2}[ {P2}Welcome User {H2}]',width=54,padding=(1,4),style='#00FF00'))
         print('')
         useragent('new')
